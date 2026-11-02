@@ -105,11 +105,9 @@ agentic-pr-review/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/agentic-pr-review.git
+git clone https://github.com/sogolnaseri/agentic-pr-review.git
 cd agentic-pr-review
 ```
-
-Replace `YOUR_USERNAME` with your GitHub username after publishing.
 
 ### 2. Create a virtual environment
 
