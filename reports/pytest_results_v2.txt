@@ -1,0 +1,61 @@
+============================= test session starts ==============================
+platform darwin -- Python 3.12.4, pytest-9.2.0, pluggy-1.7.0 -- /Users/sogolnaseri/agentic-pr-review/venv/bin/python
+cachedir: .pytest_cache
+rootdir: /Users/sogolnaseri/agentic-pr-review
+plugins: anyio-4.16.0
+collecting ... collected 13 items
+
+tests/test_order_service_v2.py::test_calculate_order_total_positive_inputs PASSED [  7%]
+tests/test_order_service_v2.py::test_calculate_order_total_zero_quantity PASSED [ 15%]
+tests/test_order_service_v2.py::test_calculate_order_total_negative_price FAILED [ 23%]
+tests/test_order_service_v2.py::test_calculate_order_total_negative_quantity FAILED [ 30%]
+tests/test_order_service_v2.py::test_calculate_order_total_negative_discount FAILED [ 38%]
+tests/test_order_service_v2.py::test_calculate_order_total_large_values PASSED [ 46%]
+tests/test_order_service_v2.py::test_check_inventory_sufficient_stock PASSED [ 53%]
+tests/test_order_service_v2.py::test_check_inventory_exact_stock PASSED  [ 61%]
+tests/test_order_service_v2.py::test_check_inventory_insufficient_stock PASSED [ 69%]
+tests/test_order_service_v2.py::test_check_inventory_negative_available_stock FAILED [ 76%]
+tests/test_order_service_v2.py::test_calculate_shipping_below_threshold PASSED [ 84%]
+tests/test_order_service_v2.py::test_calculate_shipping_exact_threshold PASSED [ 92%]
+tests/test_order_service_v2.py::test_calculate_shipping_above_threshold PASSED [100%]
+
+=================================== FAILURES ===================================
+__________________ test_calculate_order_total_negative_price ___________________
+
+    def test_calculate_order_total_negative_price():
+        # REQUIREMENT_UNCLEAR: Need to confirm if negative price should be validated.
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_order_service_v2.py:12: Failed
+_________________ test_calculate_order_total_negative_quantity _________________
+
+    def test_calculate_order_total_negative_quantity():
+        # REQUIREMENT_UNCLEAR: Need to confirm if negative quantity should be validated.
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_order_service_v2.py:17: Failed
+_________________ test_calculate_order_total_negative_discount _________________
+
+    def test_calculate_order_total_negative_discount():
+        # REQUIREMENT_UNCLEAR: Need to confirm if negative discount should be validated.
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_order_service_v2.py:22: Failed
+________________ test_check_inventory_negative_available_stock _________________
+
+    def test_check_inventory_negative_available_stock():
+        # REQUIREMENT_UNCLEAR: Need to confirm if negative available stock should be validated.
+>       with pytest.raises(ValueError):
+E       Failed: DID NOT RAISE ValueError
+
+tests/test_order_service_v2.py:39: Failed
+=========================== short test summary info ============================
+FAILED tests/test_order_service_v2.py::test_calculate_order_total_negative_price
+FAILED tests/test_order_service_v2.py::test_calculate_order_total_negative_quantity
+FAILED tests/test_order_service_v2.py::test_calculate_order_total_negative_discount
+FAILED tests/test_order_service_v2.py::test_check_inventory_negative_available_stock
+========================= 4 failed, 9 passed in 0.02s ==========================
+
